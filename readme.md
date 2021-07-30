@@ -36,6 +36,21 @@ cdef func():
 ```
 python setup.py build_ext --inplace
 ```
-#### This, will create a build folder (that I have removed), a .c extension file and a .so extension for cython_version.pyx
+#### This, will create a build folder (that I have removed), a .c extension file and a .so extension file for cython_version.pyx
 #### Now, we can simply import cython_version in testing.py and continue testing 
 #### Here, I have changed the number of iterations to check the difference between the pure python implementation and the cython implementation
+
+### Results Obtained
+>Iteration: 1,Cython worked faster than python by 47.67230796473728 times
+>Iteration: 101,Cython worked faster than python by 66.76014944535251 times
+>Iteration: 201,Cython worked faster than python by 66.3349647621788 times
+>Iteration: 301,Cython worked faster than python by 70.33705667424746 times
+>Iteration: 401,Cython worked faster than python by 65.1726105471751 times
+>Iteration: 501,Cython worked faster than python by 64.54965532545418 times
+>Iteration: 601,Cython worked faster than python by 68.64217024455532 times
+>Iteration: 701,Cython worked faster than python by 63.914523996850676 times
+>Iteration: 801,Cython worked faster than python by 66.27060800405158 times
+>Iteration: 901,Cython worked faster than python by 65.9698829151018 times
+
+#### On an average, for this simple experiment, I found Cython to work almost 65 times faster than the pure python implementation
+
