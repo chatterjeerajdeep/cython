@@ -8,17 +8,34 @@
 
 ```
 pip install cython
-
 ```
 
 #### Then, we need a C/C++ compiler. This installation will vary with the OS you use. I am using Ubuntu, and it comes already installed. 
 #### We write a Cython code in a file with .pyx extension
-#### In this project, I have a simple for loop implementation in the pure_python.py file and the same implementation in cython_version.pyx file, with the modified type definition ofcourse.
+#### In plain python we can initialise a variable like this
+
+```
+a = 5
+```
+
+#### In Cython, we will need to mention the datatype like this
+
+```
+cdef int a = 5
+```
+
+While defining function, instead of using def, we can use either cdef or cpdef
+
+```
+cdef func():
+...
+```
+#### In this project, I have a simple for loop implementation in the pure_python.py file and the same implementation in cython_version.pyx file.
 
 #### Then, we need to build the .pyx file and for that I have the setup.py file. To build the cython file, we will use the command
 ```
 python setup.py build_ext --inplace
-
 ```
-#### This, will create a build folder (that I have removed), a .c extension file and  a .so extension for cython_version
+#### This, will create a build folder (that I have removed), a .c extension file and a .so extension for cython_version.pyx
 #### Now, we can simply import cython_version in testing.py and continue testing 
+#### Here, I have changed the number of iterations to check the difference between the pure python implementation and the cython implementation
